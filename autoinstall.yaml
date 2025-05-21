@@ -16,6 +16,10 @@ autoinstall:
   storage:
     layout:
       name: direct
+  codecs:
+    install: true
+  drivers:
+    install: true
   late-commands:
     - curtin in-target -- sh -c "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"
     - curtin in-target -- apt update
