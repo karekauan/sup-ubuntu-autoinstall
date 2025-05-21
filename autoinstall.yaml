@@ -1,21 +1,33 @@
 #cloud-config
 autoinstall:
-    version: 1
-    identity:
-        hostname: sup-sup
-        username: sante-sup
-        password: '$6$15BM3XbO0Ae.cwwE$Md2FRtPLofW4uzHQdDAbTXcsAOCnuCzqZbCY6b78.p47/vdNg1/W50vjDfEVzZPse1k4u/rceV9q7j9GfihlE0'
-    locale: pt_BR.utf8
-    keyboard:
-        layout: br
-    timezone: "America/Sao_Paulo"
-    storage:
+  version: 1
+  identity:
+    hostname: sup-sup
+    username: sante-sup
+    password: '$6$15BM3XbO0Ae.cwwE$Md2FRtPLofW4uzHQdDAbTXcsAOCnuCzqZbCY6b78.p47/vdNg1/W50vjDfEVzZPse1k4u/rceV9q7j9GfihlE0'
+  locale: pt_BR.utf8
+  keyboard:
+    layout: br
+  timezone: "America/Sao_Paulo"
+  network:
+  network:
+    version: 2
+    wifis:
+      wlo1:
+        dhcp4: true
+        optional: true
+        access-points:
+          "SANTE UNIFI 5G":
+            password: "sante91084852"
+        nameservers:
+          addresses: [8.8.8.8, 1.1.1.1]
+  storage:
     layout:
       name: lvm
       sizing-policy: all
-    codecs:
-        install: true
-    drivers:
-        install: true
-    updates: all
-    shutdown: reboot
+  codecs:
+    install: true
+  drivers:
+    install: true
+  updates: all
+  shutdown: reboot
