@@ -9,7 +9,7 @@ autoinstall:
   identity:
     hostname: "sup-sup"
     username: "sante-sup"
-    password: "$6$15BM3XbO0Ae.cwwE$Md2FRtPLofW4uzHQdDAbTXcsAOCnuCzqZbCY6b78.p47/vdNg1/W50vjDfEVzZPse1k4u/rceV9q7j9GfihlE0"
+    password: "$6$V/FBAaYUeYO5kho4$WWvRLCnrM/e/cGuhIv5XVVO.e3k9nKN2MRBs2TJ8qkVqgQUmTXyut6syKSaeWtWQZyKoDh65hqFwIlyL9g9EC1"
   ssh:
     install-server: true
   storage:
