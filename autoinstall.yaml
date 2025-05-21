@@ -12,10 +12,10 @@ autoinstall:
     password: "$6$15BM3XbO0Ae.cwwE$Md2FRtPLofW4uzHQdDAbTXcsAOCnuCzqZbCY6b78.p47/vdNg1/W50vjDfEVzZPse1k4u/rceV9q7j9GfihlE0"
   ssh:
     install-server: true
-    allow-pw: true
   storage:
     layout:
-      name: direct
+      name: lvm
+      sizing-policy: all
   codecs:
     install: true
   drivers:
