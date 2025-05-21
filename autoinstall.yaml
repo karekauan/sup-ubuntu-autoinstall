@@ -1,39 +1,31 @@
 #cloud-config
 autoinstall:
-  version: 1
-  locale: "pt_BR.UTF-8"
-  keyboard:
-    layout: "br"
-    variant: "abnt2"
-  timezone: "America/Sao_Paulo"
-  identity:
-    hostname: "sup-sup"
-    username: "sante-sup"
-    password: "$6$V/FBAaYUeYO5kho4$WWvRLCnrM/e/cGuhIv5XVVO.e3k9nKN2MRBs2TJ8qkVqgQUmTXyut6syKSaeWtWQZyKoDh65hqFwIlyL9g9EC1"
-  ssh:
-    install-server: true
-  storage:
+    version: 1
+    identity:
+        realname: 'Zer01TI'
+        hostname: z1tsp01dt10
+        username: zer01ti
+        password: '$6$OnzoJhhomoCJ.P3u$/o5jpe1KpFx0SJEtLtEfn.1v/waUaad1R5DjEcvDGFaSTgrLpwB9LTGjKsDFC3OF1ckHpRT8cELKpS6A7gcFV0'
+    locale: pt_BR.utf8
+    keyboard:
+        layout: br
+    timezone: "America/Sao_Paulo"
+    storage:
     layout:
       name: lvm
       sizing-policy: all
-  codecs:
-    install: true
-  drivers:
-    install: true
-  updates: all
-  shutdown: reboot
-  late-commands:
-    - curtin in-target -- sh -c "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"
-    - curtin in-target -- apt update
-    - curtin in-target -- apt -y upgrade
-    - curtin in-target -- apt -y autoremove
-    - curtin in-target -- apt-get update
-    - curtin in-target -- apt-get -y upgrade
-    - curtin in-target -- snap refresh
-    - curtin in-target -- wget -O /home/sante-sup/google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    - curtin in-target -- dpkg -i /home/sante-sup/google-chrome-stable_current_amd64.deb
-    - curtin in-target -- snap install discord
-    - curtin in-target -- snap install emote
-    - curtin in-target -- add-apt-repository -y ppa:obsproject/obs-studio
-    - curtin in-target -- apt -y install obs-studio flameshot
-    - curtin in-target -- apt-get -y -f install
+    packages:
+        - libreoffice
+        - gimp
+        - vlc
+        - ufw
+    snaps:
+        - name: spotify
+          channel: stable
+          classic: false
+    codecs:
+        install: true
+    drivers:
+        install: true
+    updates: all
+    shutdown: reboot
