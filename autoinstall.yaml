@@ -1,12 +1,6 @@
 #cloud-config
 autoinstall:
     version: 1
-    reporting:
-        hook:
-            type: webhook
-            endpoint: http://example.com/endpoint/path
-    early-commands:
-        - ping -c1 198.162.1.1
     locale: en_US
     keyboard:
         layout: gb
