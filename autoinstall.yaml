@@ -10,17 +10,19 @@ autoinstall:
     layout: br
   timezone: "America/Sao_Paulo"
   network:
-  network:
-    version: 2
-    wifis:
-      wlo1:
-        dhcp4: true
-        optional: true
-        access-points:
-          "SANTE UNIFI 5G":
-            password: "sante91084852"
-        nameservers:
-          addresses: [8.8.8.8, 1.1.1.1]
+    network:
+      version: 2
+      wifis:
+        wlo1:
+          dhcp4: true
+          optional: true
+          access-points:
+            "SANTE UNIFI 5G":
+              password: "sante91084852"
+          nameservers:
+            addresses:
+              - 8.8.8.8
+              - 1.1.1.1
   storage:
     layout:
       name: lvm
