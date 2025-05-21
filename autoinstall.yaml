@@ -20,8 +20,6 @@ autoinstall:
     install: true
   drivers:
     install: true
-  updates: all
-  shutdown: reboot
   late-commands:
     - curtin in-target -- sh -c "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"
     - curtin in-target -- apt update
@@ -37,3 +35,5 @@ autoinstall:
     - curtin in-target -- add-apt-repository -y ppa:obsproject/obs-studio
     - curtin in-target -- apt -y install obs-studio flameshot
     - curtin in-target -- apt-get -y -f install
+  updates: all
+  shutdown: reboot
