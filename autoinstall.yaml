@@ -1,30 +1,21 @@
 #cloud-config
 autoinstall:
-  version: 1
-  locale: "pt_BR.UTF-8"
-  keyboard:
-    layout: "br"
-  timezone: "America/Sao_Paulo"
-  identity:
-    hostname: "sup-sup"
-    username: "sante-sup"
-    password: "$6$15BM3XbO0Ae.cwwE$Md2FRtPLofW4uzHQdDAbTXcsAOCnuCzqZbCY6b78.p47/vdNg1/W50vjDfEVzZPse1k4u/rceV9q7j9GfihlE0"
-  ssh:
-    install-server: true
-    allow-pw: true
-  storage:
+    version: 1
+    identity:
+        hostname: sup-sup
+        username: sante-sup
+        password: '$6$15BM3XbO0Ae.cwwE$Md2FRtPLofW4uzHQdDAbTXcsAOCnuCzqZbCY6b78.p47/vdNg1/W50vjDfEVzZPse1k4u/rceV9q7j9GfihlE0'
+    locale: pt_BR.utf8
+    keyboard:
+        layout: br
+    timezone: "America/Sao_Paulo"
+    storage:
     layout:
-      name: direct
-  codecs:
-    install: true
-  drivers:
-    install: true
-  snaps:
-    - name: discord
-      channel: stable
-      classic: false
-    - name: emote
-      channel: stable
-      classic: false
-  updates: all
-  shutdown: reboot
+      name: lvm
+      sizing-policy: all
+    codecs:
+        install: true
+    drivers:
+        install: true
+    updates: all
+    shutdown: reboot
