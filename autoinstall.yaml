@@ -13,9 +13,3 @@ autoinstall:
     layout:
       name: lvm
       sizing-policy: all
-  codecs:
-    install: true
-  drivers:
-    install: true
-  updates: all
-  shutdown: reboot
