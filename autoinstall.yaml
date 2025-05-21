@@ -16,3 +16,18 @@ autoinstall:
   storage:
     layout:
       name: direct
+  late-commands:
+    - curtin in-target -- sh -c "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"
+    - curtin in-target -- apt update
+    - curtin in-target -- apt -y upgrade
+    - curtin in-target -- apt -y autoremove
+    - curtin in-target -- apt-get update
+    - curtin in-target -- apt-get -y upgrade
+    - curtin in-target -- snap refresh
+    - curtin in-target -- wget -O /home/sante-sup/google-chrome-stable_current_amd64.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - curtin in-target -- dpkg -i /home/sante-sup/google-chrome-stable_current_amd64.deb
+    - curtin in-target -- snap install discord
+    - curtin in-target -- snap install emote
+    - curtin in-target -- add-apt-repository -y ppa:obsproject/obs-studio
+    - curtin in-target -- apt -y install obs-studio flameshot
+    - curtin in-target -- apt-get -y -f install
