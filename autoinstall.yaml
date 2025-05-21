@@ -35,3 +35,5 @@ autoinstall:
     - curtin in-target -- add-apt-repository -y ppa:obsproject/obs-studio
     - curtin in-target -- apt -y install obs-studio flameshot
     - curtin in-target -- apt-get -y -f install
+  updates: all
+  shutdown: reboot
