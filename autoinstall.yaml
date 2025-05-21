@@ -1,0 +1,26 @@
+autoinstall:
+  version: 1
+  identity:
+    hostname: ubuntu-desktop
+    username: youruser
+    password: "905256"
+  locale: pt-BR
+  keyboard:
+    layout: br
+    variant: abnt2
+  timezone: America/Sao_Paulo
+  storage:
+    layout:
+      name: direct
+  late-commands:
+    - echo "nameserver 8.8.8.8" > /target/etc/resolv.conf
+    - curtin in-target -- apt update
+    - curtin in-target -- apt upgrade -y
+    - curtin in-target -- apt autoremove -y
+    - curtin in-target -- snap refresh
+    - curtin in-target -- wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - curtin in-target -- dpkg -i google-chrome-stable_current_amd64.deb || apt-get install -f -y
+    - curtin in-target -- snap install discord emote
+    - curtin in-target -- add-apt-repository ppa:obsproject/obs-studio -y
+    - curtin in-target -- apt update
+    - curtin in-target -- apt install obs-studio flameshot -y
