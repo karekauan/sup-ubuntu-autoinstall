@@ -1,31 +1,22 @@
 #cloud-config
 autoinstall:
     version: 1
-    identity:
-        realname: 'Zer01TI'
-        hostname: z1tsp01dt10
-        username: zer01ti
-        password: '$6$OnzoJhhomoCJ.P3u$/o5jpe1KpFx0SJEtLtEfn.1v/waUaad1R5DjEcvDGFaSTgrLpwB9LTGjKsDFC3OF1ckHpRT8cELKpS6A7gcFV0'
-    locale: pt_BR.utf8
+    reporting:
+        hook:
+            type: webhook
+            endpoint: http://example.com/endpoint/path
+    early-commands:
+        - ping -c1 198.162.1.1
+    locale: en_US
     keyboard:
-        layout: br
-    timezone: "America/Sao_Paulo"
+        layout: gb
+        variant: dvorak
     storage:
-    layout:
-      name: lvm
-      sizing-policy: all
-    packages:
-        - libreoffice
-        - gimp
-        - vlc
-        - ufw
-    snaps:
-        - name: spotify
-          channel: stable
-          classic: false
-    codecs:
-        install: true
-    drivers:
-        install: true
-    updates: all
-    shutdown: reboot
+        layout:
+            name: lvm
+    identity:
+        hostname: hostname
+        username: username
+        password: $crypted_pass
+    ssh:
+        install-server: yes
