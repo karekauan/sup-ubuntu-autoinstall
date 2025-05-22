@@ -29,8 +29,6 @@ autoinstall:
     - curtin in-target -- apt -y autoremove
     - curtin in-target -- apt-get update
     - curtin in-target -- apt-get -y upgrade
-    - curtin in-target -- snap install discord
-    - curtin in-target -- snap install emote
     - curtin in-target -- add-apt-repository -y ppa:obsproject/obs-studio
     - curtin in-target -- apt -y install obs-studio flameshot
     - curtin in-target -- apt-get -y -f install
