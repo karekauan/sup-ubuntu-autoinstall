@@ -6,9 +6,9 @@ autoinstall:
     layout: "br"
   timezone: "America/Sao_Paulo"
   identity:
-    realname: 'Lucas'
-    hostname: "sup-lucas"
-    username: "sante-sup"
+    realname: 'Leticia'
+    hostname: "com-leticia"
+    username: "sante-com"
     password: "$6$V/FBAaYUeYO5kho4$WWvRLCnrM/e/cGuhIv5XVVO.e3k9nKN2MRBs2TJ8qkVqgQUmTXyut6syKSaeWtWQZyKoDh65hqFwIlyL9g9EC1"
   ssh:
     install-server: true
