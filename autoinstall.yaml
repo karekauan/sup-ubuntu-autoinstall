@@ -6,8 +6,8 @@ autoinstall:
     layout: "br"
   timezone: "America/Sao_Paulo"
   identity:
-    realname: 'Laysa'
-    hostname: "sup-laysa"
+    realname: 'Suporte'
+    hostname: "sup-suporte"
     username: "sante-sup"
     password: "$6$V/FBAaYUeYO5kho4$WWvRLCnrM/e/cGuhIv5XVVO.e3k9nKN2MRBs2TJ8qkVqgQUmTXyut6syKSaeWtWQZyKoDh65hqFwIlyL9g9EC1"
   ssh:
