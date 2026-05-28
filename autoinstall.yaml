@@ -27,13 +27,11 @@ autoinstall:
     - name: emote
       channel: stable
       classic: false
+    - name: obs-studio
+      channel: stable
+      classic: false
   updates: all
   user-data:
-    apt:
-      sources:
-        obs-studio:
-          source: 'ppa:obsproject/obs-studio'
     packages:
-      - obs-studio
       - flameshot
   shutdown: reboot
