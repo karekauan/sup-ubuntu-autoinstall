@@ -27,15 +27,13 @@ autoinstall:
     - name: emote
       channel: stable
       classic: false
-  late-commands:
-    - curtin in-target -- sh -c "echo 'nameserver 8.8.8.8' > /etc/resolv.conf"
-    - curtin in-target -- apt update
-    - curtin in-target -- apt -y upgrade
-    - curtin in-target -- apt -y autoremove
-    - curtin in-target -- apt-get update
-    - curtin in-target -- apt-get -y upgrade
-    - curtin in-target -- add-apt-repository -y ppa:obsproject/obs-studio
-    - curtin in-target -- apt -y install obs-studio flameshot
-    - curtin in-target -- apt-get -y -f install
   updates: all
+  user-data:
+    apt:
+      sources:
+        obs-studio:
+          source: 'ppa:obsproject/obs-studio'
+    packages:
+      - obs-studio
+      - flameshot
   shutdown: reboot
