@@ -6,9 +6,6 @@ autoinstall:
     layout: "br"
   timezone: "America/Sao_Paulo"
   identity:
-    realname: 'Thiago'
-    hostname: "gest-thiago"
-    username: "sante-gest"
     realname: 'Nayane'
     hostname: "com-nayane"
     username: "sante-com"
